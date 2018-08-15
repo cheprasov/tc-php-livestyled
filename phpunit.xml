@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        backupGlobals               = "false"
+        backupStaticAttributes      = "false"
+        colors                      = "true"
+        convertErrorsToExceptions   = "true"
+        convertNoticesToExceptions  = "true"
+        convertWarningsToExceptions = "true"
+        processIsolation            = "false"
+        stopOnFailure               = "true"
+        stopOnError                 = "true"
+        stopOnIncomplete            = "false"
+        stopOnSkipped               = "false"
+        bootstrap                   = "vendor/autoload.php"
+        syntaxCheck                 = "true"
+        verbose                     = "true"
+        checkForUnintentionallyCoveredCode  = "false"
+        beStrictAboutOutputDuringTests      = "false"
+        beStrictAboutTestSize               = "true"
+>
+
+    <php>
+        <const name="TEST_URL" value="http://livestyled.lh/" />
+    </php>
+
+    <testsuites>
+        <testsuite name="Unit tests">
+            <directory suffix="Test.php" >./tests/Unit/</directory>
+        </testsuite>
+        <testsuite name="Functional tests">
+            <directory suffix="Test.php" >./tests/Functional/</directory>
+        </testsuite>
+    </testsuites>
+
+</phpunit>
